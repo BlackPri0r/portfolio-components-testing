@@ -5,8 +5,8 @@ import HeroSprite from "./HeroSprite"
 function App() {
   return (
     <>
-      <div>
-        test :D
+      <div className="flex justify-center items-center ">
+          <p className="text-center pt-20">hello</p>
       </div>
       <IconCloud iconSlugs={
         ["wix", 
