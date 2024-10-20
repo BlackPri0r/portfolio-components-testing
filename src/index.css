@@ -12,3 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.sprite-container {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

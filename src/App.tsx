@@ -1,4 +1,5 @@
 import IconCloud from "./DynamicIconCloud"
+import HeroSprite from "./HeroSprite"
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           "ubuntu",
           "flask"
         ]}></IconCloud>
+        <HeroSprite></HeroSprite>
     </>
   )
 }
