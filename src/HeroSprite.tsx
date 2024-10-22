@@ -13,6 +13,15 @@ export default function HeroSprite() {
                 frameCount={2}
                 fps={1.2}
             />
+            <SpriteAnimator 
+                shouldAnimate={true}
+                sprite="./twirl.png"
+                width={48}
+                height={48}
+                scale={0.2}
+                frameCount={11}
+                fps={8}
+            />
         </div>
 
     )
