@@ -5,6 +5,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: gray;
   color: white;
+  cursor: none;
 }
 .sprite-container {
   image-rendering: pixelated;

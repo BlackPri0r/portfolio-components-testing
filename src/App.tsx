@@ -1,12 +1,12 @@
+import CustomCursor from "./CustomCursor"
 import IconCloud from "./DynamicIconCloud"
 import HeroSprite from "./HeroSprite"
-import InteractiveDragon from "./InteractiveDragon"
 
 function App() {
   return (
     <>
+    <CustomCursor></CustomCursor>
     <div className="*:h-dvh *:w-full">
-      <InteractiveDragon></InteractiveDragon>
       <div className="flex justify-center items-center">
           <p className="text-center text-9xl">LAWRENCE</p>
       </div>
