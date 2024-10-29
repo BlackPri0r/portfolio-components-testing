@@ -26,25 +26,38 @@ export default function CustomCursor() {
   
   const variants = {
     default: {
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16
+      x: mousePosition.x - 96,
+      y: mousePosition.y - 96
     }
   }
 
   return(
     <div>
       <motion.div 
-        className="bg-black h-4 w-4 rounded-full fixed top-0 left-0"
+        className="bg-black h-4 w-4 rounded-full fixed top-0 left-0 select-none pointer-events-none"
         style={{
           x: mousePosition.x - 8,
           y: mousePosition.y - 8
         }}
       />
       <motion.div
-        className="border-2 border-black rounded-full h-8 w-8 fixed top-0 left-0"
-        variants={variants}
-        animate="default"
-      />
+        style={{
+          x: mousePosition.x - 96,
+          y: mousePosition.y - 96,
+        }}
+      >
+        <motion.img
+          className="rounded-full h-48 w-48 fixed top-0 left-0 select-none pointer-events-none"
+          variants={variants}
+          animate={{ rotate: [360, 0] }}
+          transition={{
+            duration: 6,
+            ease: "linear",
+            repeat: Infinity
+          }}
+          src="./png.png"
+        />
+      </motion.div>
     </div>
   )
 }
