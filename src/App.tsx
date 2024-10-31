@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import CustomCursor from "./CustomCursor"
 import IconCloud from "./DynamicIconCloud"
 import HeroSprite from "./HeroSprite"
@@ -8,7 +9,21 @@ function App() {
     <CustomCursor></CustomCursor>
     <div className="*:h-dvh *:w-full">
       <div className="flex justify-center items-center">
-          <p className="text-center text-9xl">LAWRENCE</p>
+          <motion.div 
+            className="text-center text-9xl"
+            variants={{
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y: 0}
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.25
+            }}
+            initial="hidden"
+            animate="visible"
+          >
+            LAWRENCE
+          </motion.div>
       </div>
       <IconCloud iconSlugs={
         ["wix", 

@@ -23,13 +23,7 @@ export default function CustomCursor() {
       window.removeEventListener("mousemove", mouseMove)
     }
   }, []);
-  
-  const variants = {
-    default: {
-      x: mousePosition.x - 96,
-      y: mousePosition.y - 96
-    }
-  }
+
 
   return(
     <div>
@@ -40,24 +34,18 @@ export default function CustomCursor() {
           y: mousePosition.y - 8
         }}
       />
-      <motion.div
-        style={{
-          x: mousePosition.x - 96,
-          y: mousePosition.y - 96,
+      <motion.img
+        className="w-24 h-28 rounded-full fixed top-0 left-0 select-none pointer-events-none"
+        animate = {{
+          rotate: [0, 360]
         }}
-      >
-        <motion.img
-          className="rounded-full h-48 w-48 fixed top-0 left-0 select-none pointer-events-none"
-          variants={variants}
-          animate={{ rotate: [360, 0] }}
-          transition={{
-            duration: 6,
-            ease: "linear",
-            repeat: Infinity
-          }}
-          src="./png.png"
-        />
-      </motion.div>
+        transition={{repeat: Infinity, ease: "linear", duration: 10}}
+        style = {{
+          x: mousePosition.x-50,
+          y: mousePosition.y - 65
+        }}
+        src="./finalcircle.png"
+      />
     </div>
   )
 }
