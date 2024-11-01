@@ -36,9 +36,9 @@ export default function CustomCursor() {
       />
       <motion.img
         className="w-24 h-28 rounded-full fixed top-0 left-0 select-none pointer-events-none"
-        animate = {{
-          rotate: [0, 360]
-        }}
+        // animate = {{
+        //   rotate: [0, 360]
+        // }}
         transition={{repeat: Infinity, ease: "linear", duration: 10}}
         style = {{
           x: mousePosition.x-50,
@@ -48,4 +48,4 @@ export default function CustomCursor() {
       />
     </div>
   )
-}
+} 
