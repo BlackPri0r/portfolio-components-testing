@@ -26,19 +26,19 @@ export default function CustomCursor() {
 
 
   return(
-    <div>
+    <div className="h-0 w-0">
       <motion.div 
-        className="bg-black h-4 w-4 rounded-full fixed top-0 left-0 select-none pointer-events-none"
+        className="bg-black h-2 w-2 rounded-full fixed top-0 left-0 select-none pointer-events-none"
         style={{
-          x: mousePosition.x - 8,
-          y: mousePosition.y - 8
+          x: mousePosition.x - 4,
+          y: mousePosition.y - 4
         }}
       />
       <motion.img
-        className="w-24 h-28 rounded-full fixed top-0 left-0 select-none pointer-events-none"
-        // animate = {{
-        //   rotate: [0, 360]
-        // }}
+        className="w-24 h-28 rounded-full fixed top-0 left-0 select-none pointer-events-none origin-[51%_58%]"
+        animate = {{
+          rotate: [0, 360]
+        }}
         transition={{repeat: Infinity, ease: "linear", duration: 10}}
         style = {{
           x: mousePosition.x-50,
